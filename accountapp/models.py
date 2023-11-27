@@ -1,11 +1,8 @@
 from django.db import models
+from django.utils import timezone
+class Post(models.Model):
+  # 생략
+  image = models.ImageField(upload_to = "images/", null=True, blank=True)
 
-# Create your models here.
-
-
-class Profile(models.Model):
-    title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/')
-
-    def __str__(self):
-        return self.title
+  def __str__(self):
+    return str(self.title)

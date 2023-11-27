@@ -3,24 +3,28 @@
 
 {% block content %}
 
-    <!-- 기존의 main 컨텐츠 -->
 
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img class="slide-image" src="{% static 'image/img1.jpg' %}" style="width:100%; margin: 0 auto; display:block;">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="slide-image" src="{% static 'image/img1.jpg' %}" alt="myuImage" style="width:100%; margin: 0 auto; display:block;">
 
-                <div class="slide-text">Art of the Future, Touched by Artificial Intelligence</div>
-            </div>
-            <div class="mySlides fade">
-                <img class="slide-image"src="{% static 'image/img2.jpg' %}" style="width:100%; margin: 0 auto; display:block;">
-                <div class="slide-text">A New Horizon of Art, Painted with the Brush of Artificial Intelligence</div>
-            </div>
+            <div class="slide-text">Art of the Future, Touched by Artificial Intelligence</div>
         </div>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
+        <div class="mySlides fade">
+            <img class="slide-image" src="{% static 'image/img2.jpg' %}" alt="myuImage" style="width:100%; margin: 0 auto; display:block;">
+            <div class="slide-text">A New Horizon of Art, Painted with the Brush of Artificial Intelligence</div>
 
+
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+    {% for post in posts %}
+    <a href="{% url 'detail' post.id %}">1</a>
+    {% endfor %}
 
 
 {% endblock %}

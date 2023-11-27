@@ -17,10 +17,21 @@
     animation-name: fade; /* 애니메이션 이름 설정 */
     animation-duration: 1.5s; /* 애니메이션 지속 시간 설정 */
 }
+
+@keyframes fade {
+    from {
+        opacity: 0.4 /* 애니메이션 시작 시 투명도 0.4 */
+    }
+    to {
+        opacity: 1 /* 애니메이션 끝날 때 투명도 1 */
+    }
+}
+
+
 .dot {
-    height: 15px; /* 도트 높이 설정 */
-    width: 15px; /* 도트 너비 설정 */
-    margin: 0 2px; /* 도트 주변 여백 설정 */
+    height: 0.9375rem; /* 도트 높이 설정 */
+    width: 0.9375rem; /* 도트 너비 설정 */
+    margin: 0 0.125rem; /* 도트 주변 여백 설정 */
     background-color: #bbb; /* 도트 배경색 설정 */
     border-radius: 50%; /* 도트 모서리 둥글게 설정 */
     display: inline-block; /* 도트를 인라인 블록으로 설정 */
@@ -33,7 +44,7 @@
 
 .slide-image {
     width: 100%; /* 슬라이드 이미지 너비 설정 */
-    height: 400px; /* 슬라이드 이미지 높이 설정 */
+    height: 25rem; /* 슬라이드 이미지 높이 설정 */
     background-size: cover; /* 배경 이미지 크기를 요소 크기에 맞춤 */
     background-position: center; /* 배경 이미지를 중앙에 배치 */
 }
@@ -43,7 +54,9 @@
     top: 50%; /* 슬라이드 텍스트를 상단에서 50% 위치에 배치 */
     left: 50%; /* 슬라이드 텍스트를 왼쪽에서 50% 위치에 배치 */
     transform: translate(-50%, -50%); /* 슬라이드 텍스트 중앙 정렬 */
-    font-size: 40px; /* 슬라이드 텍스트 크기 설정 */
+    font-size: 2.5rem; /* 슬라이드 텍스트 크기 설정 */
     color: yellow; /* 슬라이드 텍스트 색상 설정 */
-    font-family: 'Edu NSW ACT Foundation', cursive; /* 슬라이드 텍스트 글꼴 설정 */
+    font-family: 'Bebas Neue', cursive; /* 슬라이드 텍스트 글꼴 설정 */
 }
+
+
