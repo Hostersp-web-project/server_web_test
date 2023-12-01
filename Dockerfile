@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "hosters.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "toy_project.wsgi:application"]
