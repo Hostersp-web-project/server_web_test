@@ -1,4 +1,4 @@
-name: Create .env file
+name: Create envfile
 
 on:
   push:
@@ -6,10 +6,10 @@ on:
       - test3
 
 jobs:
-  create-env-file:
+  create-envfile:
     runs-on: ubuntu-latest
     steps:
-      - name: Create .env file
+      - name: Make envfile
         uses: SpicyPizza/create-envfile@v2.0
         with:
           envkey_DEBUG: ${{ vars.DEBUG }}
