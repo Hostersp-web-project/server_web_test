@@ -1,0 +1,24 @@
+name: Create .env file
+
+on:
+  push:
+    branches:
+      - test3
+
+jobs:
+  create-env-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          DEBUG: ${{ vars.DEBUG }}
+          CACHE_URL: ${{ secrets.CACHE_URL }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          SQLITE_URL: ${{ secrets.SQLITE_URL }}
+          #directory: <directory_name>
+          file_name: .env
+          fail_on_empty: true
+          sort_keys: true
