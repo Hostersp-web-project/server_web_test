@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v2.0
         with:
