@@ -12,12 +12,12 @@ jobs:
       - name: Create .env file
         uses: SpicyPizza/create-envfile@v2.0
         with:
-          DEBUG: ${{ vars.DEBUG }}
-          CACHE_URL: ${{ secrets.CACHE_URL }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          REDIS_URL: ${{ secrets.REDIS_URL }}
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          SQLITE_URL: ${{ secrets.SQLITE_URL }}
+          envkey_DEBUG: ${{ env.DEBUG }}
+          envkey_CACHE_URL: ${{ secrets.CACHE_URL }}
+          envkey_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          envkey_REDIS_URL: ${{ secrets.REDIS_URL }}
+          envkey_SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          envkey_SQLITE_URL: ${{ secrets.SQLITE_URL }}
           directory: ./
           file_name: .env
           fail_on_empty: true
