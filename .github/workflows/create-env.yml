@@ -1,9 +1,6 @@
 name: Create envfile
 
-on:
-  push:
-    branches:
-      - test3
+on: [ push ]
 
 jobs:
   create-envfile:
@@ -18,7 +15,6 @@ jobs:
           envkey_REDIS_URL: ${{ secrets.REDIS_URL }}
           envkey_SECRET_KEY: ${{ secrets.SECRET_KEY }}
           envkey_SQLITE_URL: ${{ secrets.SQLITE_URL }}
-          #directory: ./
           file_name: .env
           fail_on_empty: true
           sort_keys: true
